@@ -212,7 +212,7 @@ sass:
 
 
 # Outputting
-permalink: /:collection/:title/
+permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /blog/:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -236,27 +236,33 @@ whitelist:
   - jekyll-include-cache
 
 
-# Archives
-post_archive:
-  type: liquid
-  path: /blog/
-date_archive:
-  type: liquid
-  path: /blog/date/
-category_archive:
-  type: liquid
-  path: /blog/categories/
-tag_archive:
-  type: liquid
-  path: /blog/tags/
-
-
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Archives
+post_archive:
+  type: jekyll-archives
+  path: /blog/
+date_archive:
+  type: jekyll-archives
+  path: /blog/date/
+category_archive:
+  type: jekyll-archives
+  path: /blog/categories/
+tag_archive:
+  type: jekyll-archives
+  path: /blog/tags/
+
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:title/
 
 
 # Defaults
@@ -281,3 +287,12 @@ defaults:
       layout: single
       classes: wide
       author_profile: false
+  # _pages
+  - scope:
+      path: ""
+      type: blog
+    values:
+      classes: wide
+      author_profile: false
+      sidebar:
+        nav: "archive"
