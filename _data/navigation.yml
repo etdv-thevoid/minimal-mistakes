@@ -5,7 +5,9 @@ main:
     url: /about/
     
 archive:
-  - title: "Post Archives"
+  - title: Blog Posts
+    url: /blog/
+  - title: "Archives"
     children:
       - title: "By Date"
         url: /blog/date/
