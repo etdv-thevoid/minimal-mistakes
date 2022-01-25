@@ -1,6 +1,6 @@
 ---
 title: "Posts by Category"
-permalink: /posts/categories/
+permalink: /blog/categories/
 layout: categories
 sidebar:
   nav: "archive"

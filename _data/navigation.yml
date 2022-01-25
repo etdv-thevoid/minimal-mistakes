@@ -1,15 +1,15 @@
 main:
-  - title: "Posts"
-    url: /posts/
+  - title: "Blog"
+    url: /blog/
   - title: "About"
     url: /about/
     
 archive:
   - title: "Post Archives"
     children:
-      - title: "Date"
-        url: /posts/date/
-      - title: "Categories"
-        url: /posts/categories/
-      - title: "Tags"
-        url: /posts/tags/
+      - title: "By Date"
+        url: /blog/date/
+      - title: "By Category"
+        url: /blog/categories/
+      - title: "By Tag"
+        url: /blog/tags/

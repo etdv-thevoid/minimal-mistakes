@@ -1,6 +1,6 @@
 ---
 title: "Posts by Date"
-permalink: /posts/date/
+permalink: /blog/date/
 layout: posts
 sidebar:
   nav: "archive"
