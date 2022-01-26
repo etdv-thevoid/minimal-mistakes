@@ -214,7 +214,7 @@ sass:
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /blog/:num/
+paginate_path: /posts/:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -245,28 +245,44 @@ compress_html:
 
 # Archives
 post_archive:
-  type: jekyll-archives
-  path: /blog/
+  type: liquid
+  path: /posts/
 date_archive:
-  type: jekyll-archives
-  path: /blog/date/
+  type: liquid
+  path: /posts/date/
 category_archive:
-  type: jekyll-archives
-  path: /blog/categories/
+  type: liquid
+  path: /posts/categories/
 tag_archive:
-  type: jekyll-archives
-  path: /blog/tags/
+  type: liquid
+  path: /posts/tags/
 
 
 # Collections
 collections:
-  blog:
+  portfolio:
     output: true
     permalink: /:collection/:title/
 
 
 # Defaults
 defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      classes: wide
+      author_profile: false
+  - scope:
+      path: "_pages/posts"
+      type: pages
+    values:
+      classes: wide
+      author_profile: false
+      sidebar:
+        nav: "posts"
   # _posts
   - scope:
       path: ""
@@ -279,18 +295,10 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      classes: wide
-      author_profile: false
-  # _pages
+  # _portfolio
   - scope:
       path: ""
-      type: blog
+      type: portfolio
     values:
       classes: wide
       author_profile: false

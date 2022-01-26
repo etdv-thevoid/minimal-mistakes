@@ -1,17 +1,22 @@
 main:
-  - title: "Blog"
-    url: /blog/
+  - title: "Posts"
+    url: /posts/
+  - title: "DnD"
+    url: /dnd/
+  - title: "Portfolio"
+    url: /portfolio/
   - title: "About"
     url: /about/
+  - title: "Sitemap"
+    url: /sitemap/
     
-archive:
-  - title: Blog Posts
-    url: /blog/
-  - title: "Archives"
+posts:
+  - title: "Post Archives"
+    url: /posts/
     children:
       - title: "By Date"
-        url: /blog/date/
+        url: /posts/date/
       - title: "By Category"
-        url: /blog/categories/
+        url: /posts/categories/
       - title: "By Tag"
-        url: /blog/tags/
+        url: /posts/tags/
