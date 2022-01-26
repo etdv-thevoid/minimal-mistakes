@@ -1,18 +1,23 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "DnD"
-    url: /dnd/
   - title: "Portfolio"
     url: /portfolio/
   - title: "About"
     url: /about/
-  - title: "Sitemap"
-    url: /sitemap/
     
 posts:
-  - title: "Post Archives"
-    url: /posts/
+  - title: "Categories"
+    children:
+      - title: "Blog"
+        url: /blog/
+      - title: "DnD"
+        url: /dnd/
+      - title: "MtG"
+        url: /mtg/
+      - title: "Pokémon"
+        url: /pokémon/
+  - title: "All Posts"
     children:
       - title: "By Date"
         url: /posts/date/

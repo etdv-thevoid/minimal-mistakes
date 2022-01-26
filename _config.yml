@@ -244,15 +244,9 @@ compress_html:
     envs: development
 
 # Archives
-post_archive:
-  type: liquid
-  path: /posts/
-date_archive:
-  type: liquid
-  path: /posts/date/
 category_archive:
-  type: liquid
-  path: /posts/categories/
+  type: jekyll-archives
+  path: /
 tag_archive:
   type: liquid
   path: /posts/tags/
